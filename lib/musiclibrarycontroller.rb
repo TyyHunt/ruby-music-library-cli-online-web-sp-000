@@ -37,4 +37,15 @@ class MusicLibraryController
       end
     end
   end
+
+  def list_artsits
+    artist_list = Artist.all.sort_by{|artist| artist.name}
+    counter = 1
+    artist_list.uniq.each do |artist|
+      puts "#{counter}. #{artist.name}"
+      number += 1
+    end
+  end
 end
+
+
