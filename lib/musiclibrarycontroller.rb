@@ -55,4 +55,13 @@ class MusicLibraryController
       number += 1
     end
   end
+
+  def list_genres
+    genre_list = Artist.all.sort_by{|genre| genre.name}
+    counter = 1
+    genre_list.uniq.each do |genre|
+      puts "#{counter}. #{genre.name}"
+      number += 1
+    end
+  end
 end
