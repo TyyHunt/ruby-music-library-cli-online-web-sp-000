@@ -37,7 +37,7 @@ class Artist
     unless @songs.include?(song)
       @songs << song
     end
-    if song.artist == nil  
+    if song.artist == nil
       song.artist = self
     end
   end
