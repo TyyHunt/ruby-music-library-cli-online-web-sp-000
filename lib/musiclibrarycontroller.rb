@@ -82,7 +82,7 @@ class MusicLibraryController
   def list_songs_by_genre
     puts "Please enter the name of a genre:"
     input = gets.chomp
-    artist = Genre.find_by_name(input)
+    genre = Genre.find_by_name(input)
     if genre != nil
       song_list = genre.songs.sort_by{|song| song.name}
       counter = 1
