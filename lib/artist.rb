@@ -24,9 +24,9 @@ class Artist
   end
 
   def self.create(name)
-    @name = self.new(name)
-    @name.save
-    @name
+    song = self.new(name)
+    song.save
+    song
   end
 
    def songs
@@ -43,8 +43,7 @@ class Artist
   end
 
    def genres
-    songs = @songs
-    genres = songs.map {|song| song.genre}
-    genres = genres.uniq
+    genres = @songs.map {|song| song.genre}
+    genres.uniq
   end
 end
