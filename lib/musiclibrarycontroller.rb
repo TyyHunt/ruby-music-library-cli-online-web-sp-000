@@ -39,13 +39,15 @@ class MusicLibraryController
   end
 
   def list_songs
-    song_list = Song.all.sort_by{|song| song.name}
-    counter = 1
-    song_list.each do |song|
-      puts "#{counter}. #{song.artist.name} - #{song.name} - #{song.genre.name}"
-      counter += 1
+      unsorted_songs = Song.all 
+      sorted_songs = unsorted_songs.sort_by{ |song| song.name}
+      number = 1 
+      sorted_songs.each do |song|
+        puts "#{number}. #{song.artist.name} - #{song.name} - #{song.genre.name}"
+        number += 1
+      end
+      sorted_songs 
     end
-  end
 
   def list_artists
     artist_list = Artist.all.sort_by{|artist| artist.name}
