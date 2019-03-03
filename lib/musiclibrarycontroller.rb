@@ -43,7 +43,7 @@ class MusicLibraryController
     counter = 1
     song_list.uniq.each do |song|
       puts "#{counter}. #{song.name}"
-      number += 1
+      counter += 1
     end
   end
 
@@ -52,7 +52,7 @@ class MusicLibraryController
     counter = 1
     artist_list.uniq.each do |artist|
       puts "#{counter}. #{artist.name}"
-      number += 1
+      counter += 1
     end
   end
 
@@ -61,7 +61,7 @@ class MusicLibraryController
     counter = 1
     genre_list.uniq.each do |genre|
       puts "#{counter}. #{genre.name}"
-      number += 1
+      counter += 1
     end
   end
 end
