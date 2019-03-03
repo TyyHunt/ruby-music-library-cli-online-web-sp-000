@@ -39,7 +39,6 @@ class MusicLibraryController
   end
 
   def list_songs
-      unsorted_songs = Song.all
       song_list = Song.all.sort_by{ |song| song.name}
       counter = 1
       song_list.each do |song|
