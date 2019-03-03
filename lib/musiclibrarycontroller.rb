@@ -100,7 +100,7 @@ class MusicLibraryController
         when "list genre"
           self.list_songs_by_genre
         when "play song"
-          self.play_song
+          self.play_song(arg)
         end
       end
     end
